@@ -84,8 +84,8 @@ upgrade_node()
                     uninstall_node $node_path
 
                     curl -O https://nodejs.org/dist/v$required_node_version/node-v$required_node_version-linux-armv6l.tar.gz
-                    tar -xzf ./node-v$required_node_version-linux-armv7l.tar.gz -C $node_path --strip-components=1 --no-same-owner > /dev/null 2>&1
-                    rm -f ./node-v$required_node_version-linux-armv7l.tar.gz > /dev/null 2>&1
+                    tar -xzf ./node-v$required_node_version-linux-armv6l.tar.gz -C $node_path --strip-components=1 --no-same-owner > /dev/null 2>&1
+                    rm -f ./node-v$required_node_version-linux-armv6l.tar.gz > /dev/null 2>&1
 
                     npm config set -g prefix $npm_prefix
                     npm install -g npm@$required_npm_version
