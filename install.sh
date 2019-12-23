@@ -83,6 +83,7 @@ upgrade_node()
                 "armv6l")
                     uninstall_node $node_path
 
+                    curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
                     curl -O https://nodejs.org/dist/v$required_node_version/node-v$required_node_version-linux-armv6l.tar.gz
                     tar -xzf ./node-v$required_node_version-linux-armv6l.tar.gz -C $node_path --strip-components=1 --no-same-owner > /dev/null 2>&1
                     rm -f ./node-v$required_node_version-linux-armv6l.tar.gz > /dev/null 2>&1
